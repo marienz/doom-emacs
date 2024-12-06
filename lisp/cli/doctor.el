@@ -202,7 +202,7 @@ in."
   (print! (start "Checking for stale elc files..."))
   (elc-check-dir doom-core-dir)
   (mapc #'elc-check-dir doom-module-load-path)
-  (elc-check-dir (doom-path doom-local-dir "straight" straight-build-dir))
+  (elc-check-dir (doom-path straight-base-dir "straight" straight-build-dir))
 
   (print! (start "Checking for problematic git global settings..."))
   (if (executable-find "git")
